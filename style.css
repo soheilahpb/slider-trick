@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: txt;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: txt;
+}
+body > .box {
+  width: 250px;
+  height: 150px;
+}
+body > .box > * {
+  display: flex;
+}
+body > .box > span {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: gray;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+body > .box > .slider {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+body > .box > .slider > span {
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  font-weight: 900;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+body > .box > .slider > span:nth-of-type(1) {
+  background-color: rgb(73, 167, 245);
+  animation: txt1 9s linear infinite;
+}
+body > .box > .slider > span:nth-of-type(2) {
+  background-color: rgb(248, 35, 71);
+  animation: txt2 9s linear infinite;
+}
+body > .box > .slider > span:nth-of-type(3) {
+  background-color: rgb(247, 158, 26);
+  animation: txt3 9S linear infinite;
+}
+
+@keyframes txt1 {
+  0%, 30%, 100% {
+    top: 0;
+  }
+  36% {
+    top: 50px;
+  }
+  36.001%, 94% {
+    top: -50px;
+  }
+}
+@keyframes txt2 {
+  0%, 30%, 69.001%, 100% {
+    top: -50px;
+  }
+  36%, 63% {
+    top: 0;
+  }
+  69% {
+    top: 50px;
+  }
+}
+@keyframes txt3 {
+  0%, 63%, 100% {
+    top: -50px;
+  }
+  69%, 94% {
+    top: 0;
+  }
+  99.9% {
+    top: 50px;
+  }
+}/*# sourceMappingURL=style.css.map */
